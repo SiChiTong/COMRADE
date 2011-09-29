@@ -1,0 +1,56 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT([comrade-corelib],[0.1],[bugs@project-comrade.org])
+AC_CONFIG_SRCDIR([src/Configurator.cc])
+AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
+#AC_CONFIG_HEADER([config.h])
+
+AC_LANG([C++])
+
+# Checks for programs.
+AC_PROG_CXX
+#LT_INIT()
+AC_PROG_LIBTOOL
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_CC
+AC_PROG_CPP
+
+# Checks for libraries.
+
+PKG_CHECK_MODULES(DEPS, glibmm-2.4 sigc++-2.0)
+AC_SUBST(DEPS_CFLAGS)
+AC_SUBST(DEPS_LIBS)
+AM_PATH_LOG4CPP(0.3.0)
+
+
+# Checks for header files.
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h sys/ioctl.h sys/socket.h sys/time.h termios.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+AC_HEADER_TIME
+
+# Checks for library functions.
+AC_HEADER_STDC
+AC_PROG_GCC_TRADITIONAL
+AC_FUNC_MALLOC
+AC_FUNC_STRTOD
+AC_CHECK_FUNCS([bzero gettimeofday inet_ntoa socket])
+
+CFLAGS="-Wall"
+CXXFLAGS="-Wall"
+
+AC_CHECK_LIB(Kenny, life_signs, , [ echo "  Oh my god, they've killed Kenny! You bastards!"])
+
+AC_CONFIG_FILES([
+Makefile
+corelib.pc
+src/Makefile
+])
+AC_OUTPUT

@@ -1,0 +1,22 @@
+echo "COMRADE corelib bootstrap script"
+echo "--------------------------------"
+echo
+echo "---------------------------------------------------------------------"
+echo "Preparing directory. Please ignore any messages about missing files."
+echo
+echo "aclocal"
+aclocal
+echo "autoheader"
+autoheader
+echo "automake --include-deps --add-missing"
+automake --include-deps --add-missing
+echo "autoconf"
+autoconf
+echo "---------------------------------------------------------------------"
+
+echo
+echo "Now run these commands:"
+echo
+echo "./configure"
+echo "make"
+echo "make install"

@@ -1,0 +1,1 @@
+sudo avrdude -v -p 2313 -U flash:w:stepper.bin:r -cbsd -P /dev/parport0

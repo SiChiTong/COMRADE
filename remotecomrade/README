@@ -1,0 +1,5 @@
+libraries which have been used:
+log4cpp-0.3.4b
+gtkglext-1.0.6 (higher versions may work)
+gtkglextmm-1.0.0 (higher versions may work)
+

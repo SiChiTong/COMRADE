@@ -1,0 +1,11 @@
+*.lo
+*.loT
+*.o
+*.la
+.libs
+.deps
+Makefile
+Makefile.in
+*.swp
+libfg.h
+libfg.a

@@ -1,0 +1,34 @@
+2004-03-26  Mrinal Kalakrishnan <mail@mrinal.net>
+	* Added wrapper for libfg, in the class FrameGrabber
+
+2004-02-17  Mrinal Kalakrishnan <mail@mrinal.net>, Sharad Nagappa <snagappa@symonds.net>
+	
+	* Networking code layer 1 introduced - it just sends and receives raw
+	  packets over multicast.
+
+2004-01-28  Mrinal Kalakrishnan <mail@mrinal.net>
+
+	* Singleton class template didn't work properly, fixed now.
+	* Added a centralized logger component for debug and error messages.
+	* Added a class called CorelibObject which is the object which should
+	  be created first in the application - it creates lots of other needed
+	  objects in the right order.
+
+2004-01-24  Mrinal Kalakrishnan <mail@mrinal.net>
+
+	* The XML can now contain more than one subnode with the same name,
+	  using multimap instead of map.
+	* You can use operator[] to read subnodes, for example:
+	  	maintree["config"]["robot"]["name"].get_text()
+
+2004-01-16  Mrinal Kalakrishnan <mail@mrinal.net>
+
+	* Configurator can now save the parsed XML back to disk.
+
+2004-01-15  Mrinal Kalakrishnan <mail@mrinal.net>
+
+	* Started development of COMRADE corelib
+	* Initial capabilities:
+		* It can parse an XML configuration file
+		* Contains a template class for singleton classes,
+		  something which we'll be using quite often.

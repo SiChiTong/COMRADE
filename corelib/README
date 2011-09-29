@@ -1,0 +1,24 @@
+Project COMRADE corelib
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This library contains lots of routines that are common to the robot
+and the monitoring node GUI.
+
+Requirements:
+~~~~~~~~~~~~~
+	* libsigc++ >= 2.0 (http://libsigc.sf.net/)
+	* libglibmm >= 2.4 (http://gtkmm.sf.net/)
+	* log4cpp   >= 0.3 (http://log4cpp.sf.net/)
+
+Installation:
+~~~~~~~~~~~~~
+
+./bootstrap
+./configure
+make
+make install
+
+This should install the library and the header files. To generate the
+documentation, go to the docs/ directory and run doxygen from there.
+The generated docs will be in docs/html/. (This should be automated,
+but.. bleh)

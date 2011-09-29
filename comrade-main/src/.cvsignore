@@ -1,0 +1,10 @@
+*.lo
+*.loT
+*.o
+*.la
+.libs
+.deps
+Makefile
+Makefile.in
+*.swp
+comrade

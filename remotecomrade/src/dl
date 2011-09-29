@@ -1,0 +1,2 @@
+wget -O temp.bmp http://192.168.69.69/Picture.bmp
+mv temp.bmp adam.bmp

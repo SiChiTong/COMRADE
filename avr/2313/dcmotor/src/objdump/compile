@@ -1,0 +1,10 @@
+avr-gcc -g -Wall -O3 -mmcu=at90s2313 -c ../*.c
+avr-gcc -g -Wall -O3 -mmcu=at90s2313 -Wl,-Map,dcmotor.map -o dcmotor.elf *.o
+avr-objdump -h -S dcmotor.elf > dcmotor.lst
+avr-objcopy -j .text -j .data -O ihex dcmotor.elf dcmotor.hex
+avr-objcopy -j .text -j .data -O binary dcmotor.elf dcmotor.bin
+avr-objcopy -j .text -j .data -O srec dcmotor.elf dcmotor.srec
+avr-objcopy -j .eeprom --change-section-lma .eeprom=0 -O ihex dcmotor.elf dcmotor_eeprom.hex
+avr-objcopy -j .eeprom --change-section-lma .eeprom=0 -O binary dcmotor.elf dcmotor_eeprom.bin
+avr-objcopy -j .eeprom --change-section-lma .eeprom=0 -O srec dcmotor.elf dcmotor_eeprom.srec
+

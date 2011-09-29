@@ -1,0 +1,4 @@
+//#define USING_LINUX
+//#define FLTK1_1_SUPPORTED
+#define STDOUT_SUPPORTED
+//#define USING_WIN32

@@ -1,0 +1,10 @@
+avr-gcc -g -Wall -O3 -mmcu=at90s2313 -c ../*.c
+avr-gcc -g -Wall -O3 -mmcu=at90s2313 -Wl,-Map,stepper.map -o stepper.elf *.o
+avr-objdump -h -S stepper.elf > stepper.lst
+avr-objcopy -j .text -j .data -O ihex stepper.elf stepper.hex
+avr-objcopy -j .text -j .data -O binary stepper.elf stepper.bin
+avr-objcopy -j .text -j .data -O srec stepper.elf stepper.srec
+avr-objcopy -j .eeprom --change-section-lma .eeprom=0 -O ihex stepper.elf stepper_eeprom.hex
+avr-objcopy -j .eeprom --change-section-lma .eeprom=0 -O binary stepper.elf stepper_eeprom.bin
+avr-objcopy -j .eeprom --change-section-lma .eeprom=0 -O srec stepper.elf stepper_eeprom.srec
+

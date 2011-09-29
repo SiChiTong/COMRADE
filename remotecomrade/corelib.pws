@@ -1,0 +1,56 @@
+
+[filenumbers]
+0=183
+1=1
+2=1
+3=1
+4=1
+5=1
+6=592
+7=1
+8=15
+9=16
+10=10
+11=20
+
+[filemarkers]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+10=
+11=
+
+[File View]
+filter.file.unmatch=*.so *.o *.a *.la
+filter.file.ignore.hidden=0
+filter.dir.ignore.hidden=0
+
+[executer]
+RunInTerminal=true
+
+[Project State]
+clean before build=false
+
+[filelist]
+0=/home/snagappa/comrade/remotecomrade/src/CameraDA.cc
+1=/home/snagappa/comrade/remotecomrade/src/GridDrawingArea.cc
+2=/home/snagappa/comrade/remotecomrade/src/main.cc
+3=/home/snagappa/comrade/remotecomrade/src/view3d.cc
+4=/home/snagappa/comrade/remotecomrade/src/MapUpdater.cc
+5=/home/snagappa/comrade/remotecomrade/src/MainWindow.cc
+6=/home/snagappa/comrade/remotecomrade/src/GLDrawingArea.cc
+
+[Project Tree]
+0=0
+1=0:0
+2=0:1
+
+[File Tree]
+0=0

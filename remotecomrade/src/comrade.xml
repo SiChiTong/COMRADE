@@ -1,0 +1,24 @@
+<config>
+	<robot>
+		<name>EVE</name>
+		<id>1</id>
+	</robot>
+	<logger>
+		<filename>/tmp/comrade.log</filename>
+		<priority>DEBUG</priority>
+	</logger>
+	<network>
+		<device>eth00</device>
+		<group>224.0.0.22</group>
+		<port>23932</port>
+		<rxbuffersize>4096</rxbuffersize>
+		<txpacketsize>1024</txpacketsize>
+	</network>
+	<serial>
+		<baudrate>9600</baudrate>
+	</serial>
+	<mouse>
+		<device>/dev/input/mouse3</device>
+		<updateinterval>100</updateinterval>
+	</mouse>
+</config>

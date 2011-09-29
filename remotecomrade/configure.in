@@ -1,0 +1,42 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT([comrade-main],[0.1],[bugs@project-comrade.org])
+AC_CONFIG_SRCDIR([src/MainWindow.cc])
+AC_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
+
+AC_LANG([C++])
+
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_CC
+AC_PROG_INSTALL
+
+# Checks for libraries.
+
+#AC_CHECK_LIB(stdc++)
+AM_PATH_LOG4CPP(0.3.0)
+PKG_CHECK_MODULES(DEPS, glibmm-2.4 sigc++-2.0 iris corelib gtkmm-2.4 libglademm-2.4 gtkglextmm-1.0)
+AC_SUBST(DEPS_CFLAGS)
+AC_SUBST(DEPS_LIBS)
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+
+# Checks for library functions.
+AC_CHECK_FUNCS([strstr])
+
+CFLAGS="-Wall -g"
+CXXFLAGS="-Wall -g"
+
+AC_CONFIG_FILES([
+	Makefile
+	src/Makefile
+])
+
+AC_OUTPUT

@@ -1,0 +1,15 @@
+*.lo
+*.loT
+*.o
+*.la
+.libs
+.deps
+Makefile
+Makefile.in
+*.swp
+frame.c
+frame.h
+capture.c
+capture.h
+libfg.h
+libfg.a

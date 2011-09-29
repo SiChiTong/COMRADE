@@ -1,0 +1,2 @@
+run 'compile' located in src/objdump to get the binary
+run 'burn' to burn the bin file using isp
